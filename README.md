@@ -23,8 +23,8 @@ IEnumerator Act_Chain() {
 
     yield return new WaitForSeconds(1.0f); // delay
 
-    Vector3 to2 = Random.insideUnitSphere * Random.Range(0, 5f);
-    yield return EzTween.TweenLocalPosition(targetTrans, EzEaseType.Linear, to2, 1);
+    Vector3 to2 = Vector3.one * Random.Range(1f, 5f);
+    yield return EzTween.TweenScale(targetTrans, EzEaseType.Linear, to2, 1);
 
     Debug.Log("complete");
 }
