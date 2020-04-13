@@ -115,6 +115,19 @@ public class EzTweenTest : MonoBehaviour
         });
     }
 
+    IEnumerator Act_Chain3() {
+        Vector3 to1 = Random.insideUnitSphere * Random.Range(0, 5f);
+        yield return EzTween.TweenLocalPosition(targetTrans, EzEaseType.Linear, to1, 1);
+
+        yield return new WaitForSeconds(1.0f); // delay
+
+        Vector3 to2 = Vector3.one * Random.Range(1f, 5f);
+        yield return EzTween.TweenScale(targetTrans, EzEaseType.Linear, to2, 1);
+
+        Debug.Log("complete");
+    }
+
+
     [SerializeField] Rect drawRect = new Rect(10,10,200,200);
     private void OnGUI() {
         GUILayout.BeginArea(drawRect);
@@ -146,6 +159,9 @@ public class EzTweenTest : MonoBehaviour
         }
         if (GUILayout.Button("chain: Act_Chain2")) {
             Act_Chain2();
+        }
+        if (GUILayout.Button("chain: Act_Chain3")) {
+            StartCoroutine(Act_Chain3());
         }
         GUILayout.EndArea();
     }

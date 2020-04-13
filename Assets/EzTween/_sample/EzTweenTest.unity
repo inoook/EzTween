@@ -323,7 +323,7 @@ MonoBehaviour:
     x: 10
     y: 10
     width: 350
-    height: 200
+    height: 400
 --- !u!4 &1895491905
 Transform:
   m_ObjectHideFlags: 0

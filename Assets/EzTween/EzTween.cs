@@ -246,7 +246,7 @@ public class EzTween : MonoBehaviour
         Coroutine co = INSTANCE._StartTween(from, to, time, updateAction, () => {
             // complete
             INSTANCE.tweenDic.Remove(keyObject);
-            completeAction();
+            completeAction?.Invoke();
         }, easeType, curve);
         INSTANCE.tweenDic.Add(keyObject, co);
 
@@ -390,7 +390,7 @@ public class EzTween : MonoBehaviour
         else {
             yield return null;
         }
-        completeAction();
+        completeAction?.Invoke();
     }
     #endregion
 }
