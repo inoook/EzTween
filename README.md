@@ -1,6 +1,5 @@
 # EzTween
-simple tween for Unity using coroutine.
-coroutine を使用したシンプルなUnity用のtween。
+simple tween for Unity using coroutine.  coroutine を使用したシンプルなUnity用のtween。
 
 ~~~cs
 float time = Random.Range(0.5f, 2f);
