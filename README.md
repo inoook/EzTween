@@ -3,7 +3,7 @@ simple tween for Unity.
 ~~~cs
 float time = Random.Range(0.5f, 2f);
 Vector3 to = Random.insideUnitSphere * Random.Range(0, 5f);
-EzTween.TweenLocalPosition(targetTrans, ezEaseType, to, time, () => {
+EzTween.TweenLocalPosition(targetTrans, EzEaseType.Linear, to, time, () => {
     Debug.Log("Complete");
 });
 ~~~
